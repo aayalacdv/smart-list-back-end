@@ -1,8 +1,10 @@
 import express from "express";
+import cors from "cors";
 
 const app = express()
+app.use(cors({origin: "https://smart-list-back-end.vercel.app"}))
 
-app.get("/", async (req, res) => {
+app.get("/hello", async (req, res) => {
     res.status(200).json({message: "hello nigga"})
 })
 
